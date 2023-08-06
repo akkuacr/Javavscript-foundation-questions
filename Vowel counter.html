@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+    
+    <h1>Enter Password:&nbsp;&nbsp; </h1>
+    <input id="input" type="text">
+    <button id="myButton">Submit</button>
+     
+    <script>
+          const button = document.getElementById("myButton");
+
+      function handleClick() {
+        const input=document.getElementById('input');
+         const val=input.value.toString();
+         console.log(val);
+         let flag=0;
+         for(let i=0;i<val.length;i++)
+         {   if(val[i]=='a' || val[i]=='e' || val[i]=='i' || val[i]=='o' || val[i]=='u')
+               { flag+=1;}
+         }
+         console.log(flag);
+         
+
+
+ }
+
+button.addEventListener("click", handleClick);
+
+
+
+    </script>
+
+
+
+
+  
+ </body>
+ </html>
