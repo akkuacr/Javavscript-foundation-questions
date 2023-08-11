@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Enter a task...">
+            <button id="Button" type="submit">Add</button>
+        </form>
+        <ul id="todo-list">
+
+        </ul>
+    </div>
+    <script>
+
+         let list1= document.getElementById('todo-list');
+         let form1=document.getElementById('todo-form');
+         let button=document.getElementById('Button');
+         let input=document.getElementById('todo-input');
+         form1.addEventListener("submit",(event)=>{
+             event.preventDefault();
+
+             let con=input.value;
+             const btn=document.createElement("button");
+             btn.innerText="Delete";
+             const newItem = document.createElement("li");
+             console.log(con.value);
+              newItem.innerText=con;
+              console.log(newItem);
+              newItem.appendChild(btn);
+             list1.appendChild(newItem); 
+             btn.addEventListener("click",()=>{
+               list1.removeChild(newItem);
+             })
+              
+              
+
+
+
+
+         })
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
