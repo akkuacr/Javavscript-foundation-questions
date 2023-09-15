@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+   
+
+ 
+  <form >
+     <label for="color1" >color1:</label>
+     <input type="text" id="number1" name="name" required>
+     <br><br>
+
+     <label for="operator">ADD WITH</label>
+     
+     <br><br>
+
+
+
+
+     
+     <label for="Second Number"  >Number2:</label>
+     <input type="text" id="number2" name="email" required>
+     <br><br>
+
+     
+     <input type="button" value="Submit"  onclick="hey()">
+      
+     
+      
+ </form>
+
+ <p id="result"></p>
+ 
+
+
+ <script>
+     var res;
+  function hey(){
+     //event.preventDefault();
+   //  const operator1=document.getElementById('operator').value;
+     
+     const operand1=document.getElementById('number1').value;
+     const operand2=document.getElementById('number2').value;
+      console.log(operand1);console.log(operand2);
+      // console.log(operator1);
+      if((operand1==="red" && operand2=="blue") || (operand2==="red" && operand1=="blue") ) {
+        res="purple";
+      }else if ((operand1==="red" && operand2=="yellow") || (operand2==="red" && operand1=="yellow") ) {
+        res="orange";
+        
+      } else if ((operand1==="blue" && operand2=="yellow") || (operand2==="blue" && operand1=="yellow") ) {
+        res="yellow";        
+      }else{
+        res="Invalid";
+      }
+   
+     
+     
+   console.log(res);
+
+   document.getElementById('result').textContent=res;
+    
+ }
+ 
+
+ </script>
+
+
+
+
+
+ 
+</body>
+</html>
