@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+   
+
+ 
+  <form >
+     <label for="First Number" >Number1:</label>
+     <input type="number" id="number1" name="name" required>
+     <br><br>
+
+     <label for="operator">Select an operator:</label>
+     <select id="operator" name="operator">
+         <option value="+">Addition (+)</option>
+         <option value="-">Subtraction (-)</option>
+         <option value="*">Multiplication (*)</option>
+         <option value="/">Division (/)</option>
+     </select>
+     <br><br>
+
+
+
+
+     
+     <label for="Second Number"  >Number2:</label>
+     <input type="number" id="number2" name="email" required>
+     <br><br>
+
+     
+     <input type="button" value="Submit"  onclick="hey()">
+      
+     
+      
+ </form>
+
+ <p id="result"></p>
+ 
+
+
+ <script>
+     var res;
+  function hey(){
+     //event.preventDefault();
+     const operator1=document.getElementById('operator').value;
+     
+     const operand1=parseFloat(document.getElementById('number1').value);
+     const operand2=parseFloat(document.getElementById('number2').value);
+      console.log(operand1);console.log(operand2);
+      console.log(operator1);
+   
+     
+     switch(operator1){
+
+       case '+': res=operand1+operand2;break;
+       case '-': res=operand1-operand2;break;
+       case '*': res=operand1*operand2;break;
+       case '/':
+       if(operand===0){
+        res='number cannot be divisible by Zero';
+     }else{
+       res=operand1/operand2;
+     }
+     break;
+     default:
+       res="Invalid Operator"
+     
+   }
+   console.log(res);
+
+   document.getElementById('result').textContent=res;
+    
+ }
+ 
+
+ </script>
+
+
+
+
+
+ 
+</body>
+</html>
